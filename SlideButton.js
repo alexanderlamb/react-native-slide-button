@@ -34,13 +34,13 @@ export class SlideButton extends Component {
   /* Button movement of > 40% is considered a successful slide */
   isSlideSuccessful() {
     if (!this.props.slideDirection) {
-      return this.state.dx > (this.buttonWidth * 0.4);  // Defaults to right slide
+      return this.state.dx > (this.buttonWidth * 0.8);  // Defaults to right slide
     } else if (this.props.slideDirection === SlideDirection.RIGHT) {
-      return this.state.dx > (this.buttonWidth * 0.4);
+      return this.state.dx > (this.buttonWidth * 0.8);
     } else if (this.props.slideDirection === SlideDirection.LEFT) {
-      return this.state.dx < -(this.buttonWidth * 0.4);
+      return this.state.dx < -(this.buttonWidth * 0.8);
     } else if (this.props.slideDirection === SlideDirection.BOTH) {
-      return Math.abs(this.state.dx) > (this.buttonWidth * 0.4);
+      return Math.abs(this.state.dx) > (this.buttonWidth * 0.8);
     }
   }
 
